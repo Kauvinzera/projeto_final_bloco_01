@@ -1,17 +1,16 @@
-import { Cliente } from "../model/Cliente";
+import { CadastroCliente } from "../model/CadastroCliente";
 
 
 export interface ClienteRepository {
 
-    procurarPorNumero(numero: number): void;
-    listarTodas(): void;
-    cadastrar(conta: Cliente): void;
-    atualizar(conta: Cliente): void;
+    cadastrar(conta: CadastroCliente): void;
+    atualizar(conta: CadastroCliente): void;
     deletar(numero: number): void;
+    visualizar(numero: number): void;
 
-    entrar(numero: number, senha: string): void;
+    entrar(numero: number, senha: string): CadastroCliente | null;
     pagar(numero: number): void;
-    
+
 
 
 

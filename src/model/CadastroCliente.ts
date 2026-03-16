@@ -1,6 +1,6 @@
 import { Cadastro } from "./Cadastro";
 
-export class Cliente extends Cadastro {
+export class CadastroCliente extends Cadastro {
 
 private _senha!: string;
 private _email!: string;
@@ -53,6 +53,14 @@ get qtdPedidos(): number {
 set qtdPedidos(qtdPedidos: number) {
     this._qtdPedidos = qtdPedidos;
 
+}
+
+public criarContaCliente(nome: string, cpf: number, senha: string, email: string, telefone: number, endereco: string): void {
+    super.criarConta(nome, cpf);
+    this._senha = senha;
+    this._email = email;
+    this._telefone = telefone;
+    this._endereco = endereco;
 }
 
 }

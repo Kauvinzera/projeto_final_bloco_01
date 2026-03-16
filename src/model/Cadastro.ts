@@ -23,6 +23,15 @@ public set id(id: number) {
     this._id = id;
 }
 
+public criarConta(nome: string, cpf: number): void {
+    this.nome = nome;
+    this._id = cpf;
 
+}
+
+public visualizar(): void {
+    console.log("Nome: " + this.nome);
+
+}
 
 }

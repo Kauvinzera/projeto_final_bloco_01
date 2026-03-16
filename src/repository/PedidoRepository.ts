@@ -1,13 +1,13 @@
 import { Pedido } from "../model/Pedido";
 
-export interface ProdutoRepository {
+export interface PedidoRepository {
 
-    procurarPorNumero(numero: number): void;
-    listarTodas(): void;
+    procurarPorNumero(id: number, numero: number): void;
+    listarTodas(id: number): void;
     cadastrar(pedido: Pedido): void;
     atualizar(pedido: Pedido): void;
-    deletar(numero: number): void;
+    cancelar(id: number, numero: number): void;
 
-    retirar(numero: boolean): void;
+    realizarPagamento(id: number, numero: number): void;
 
 }
